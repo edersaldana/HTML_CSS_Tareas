@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - McDonald's East London</title>
+    <!-- Incluye Tailwind CSS y el archivo de estilos personalizado -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Definiciones de colores para Tailwind (se usan en style.css) */
+        :root {
+            --color-primary-orange: #FF8901;
+            --color-dark-blue: #1E232E;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F8F8]">
+
+    <!-- 1. BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR) -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center space-x-1 font-extrabold text-2xl">
+                <span class="text-gray-900">Order</span>
+                <span class="text-primary-orange">
+                    <!-- Icono simple 'S' con estilo de logo -->
+                    <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 8v8m0 0V8m0 8h4m-4 0h-4"></path></svg>
+                </span>
+            </div>
+            
+            <!-- Links de Navegación -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">Special Offers</a>
+                <a href="#" class="bg-primary-orange text-white px-3 py-1.5 rounded-lg shadow-md font-semibold transition">Restaurants</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">Track Order</a>
+            </nav>
+
+            <!-- Botón Login/Signup -->
+            <button class="bg-dark-blue text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition hidden sm:block">
+                Login/Signup
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- 2. BANNER PRINCIPAL DEL RESTAURANTE -->
+        <div class="relative rounded-xl overflow-hidden mb-8 shadow-xl">
+            <!-- Fondo Oscuro con Imagen de Hamburguesa (Simulado) -->
+            <div class="bg-dark-blue p-8 md:p-12 relative z-0">
+                <!-- Imagen de fondo oscura o superposición. Usamos un placeholder y añadimos la ruta assets/ para referencia futura. -->
+                <div class="absolute inset-0 bg-dark-blue opacity-90" 
+                    style="background-image: url('assets/banner-background.png'); background-size: cover; background-position: center; filter: blur(3px);">
+                </div>
+
+                <div class="relative flex flex-col md:flex-row justify-between items-center">
+                    <!-- Información del Restaurante (Izquierda) -->
+                    <div class="text-white w-full md:w-3/5 space-y-4 pt-10 md:pt-0">
+                        <p class="text-sm font-medium text-primary-orange">I'm lovin' it!</p>
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">McDonald's East London</h1>
+                        
+                        <!-- Detalles de Servicio -->
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-sm pt-2">
+                            <div class="flex items-center space-x-2 bg-gray-800 bg-opacity-70 rounded-lg p-2">
+                                <!-- Icono de pedido mínimo -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                <span>Minimum Order: **12 GBP**</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-gray-800 bg-opacity-70 rounded-lg p-2">
+                                <!-- Icono de entrega -->
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Delivery in **20-25 Minutes**</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Botón de Abierto -->
+                        <button class="bg-primary-orange text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-xl mt-4 hover:bg-opacity-90 transition">
+                            Open until 3:00 AM
+                        </button>
+                    </div>
+
+                    <!-- Tarjeta de Producto Destacado (Derecha) -->
+                    <div class="bg-white rounded-xl shadow-2xl p-4 w-full md:w-2/5 mt-6 md:mt-0 max-w-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <!-- Puntuación -->
+                            <div class="flex items-center space-x-1">
+                                <span class="text-4xl font-extrabold text-primary-orange">3.4</span>
+                            </div>
+                            <!-- Imagen del Producto (Usamos placeholder con ruta assets/) -->
+                            <img src="assets/big-mac-combo.png" onerror="this.onerror=null;this.src='https://placehold.co/180x150/FF8901/white?text=Big+Mac+Combo';" alt="Hamburguesa y papas fritas" class="rounded-lg w-32 h-32 object-cover shadow-lg">
+                        </div>
+                        
+                        <!-- Estrellas y Reseñas -->
+                        <div class="flex flex-col">
+                            <div class="flex text-yellow-500 text-lg">
+                                <span class="font-bold">★★★</span><span class="text-gray-300">★★</span>
+                            </div>
+                            <span class="text-sm text-gray-500">1,360 reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SECCIÓN DE OFERTAS Y BÚSQUEDA -->
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
+            <h2 class="text-2xl font-bold">All Offers from McDonald's East London</h2>
+            <!-- Barra de Búsqueda -->
+            <div class="relative w-full sm:w-auto sm:min-w-[300px]">
+                <input type="text" placeholder="Search from menu..." class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg focus:ring-primary-orange focus:border-primary-orange transition" aria-label="Buscar en el menú">
+                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
+
+        <!-- 4. BARRA DE CATEGORÍAS DE PRODUCTOS -->
+        <div class="bg-primary-orange rounded-lg p-3 mb-8 overflow-x-auto whitespace-nowrap shadow-lg">
+            <nav class="flex space-x-4 md:space-x-8 text-sm font-semibold">
+                <!-- Categoría Activa -->
+                <a href="#" class="inline-block bg-white text-primary-orange px-4 py-2 rounded-lg shadow-md transition duration-200">Offers</a>
+                <!-- Otras Categorías -->
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Burgers</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Fries</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Snacks</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Salads</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Cold drinks</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Happy Meal®</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Desserts</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Hot drinks</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Sauces</a>
+                <a href="#" class="inline-block text-white hover:bg-white hover:text-primary-orange px-4 py-2 rounded-lg transition duration-200">Orbit®</a>
+            </nav>
+        </div>
+
+        <!-- 5. SECCIÓN DE OFERTAS -->
+        <h2 class="text-2xl font-bold mb-5">Current Offers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+            <!-- Tarjeta de Oferta 1: First Order Discount -->
+            <div class="relative bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                <!-- Usamos placeholder con ruta assets/ -->
+                <img src="assets/offer-first-order.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Mujer+Riendo';" alt="Mujer sonriendo usando un teléfono" class="w-full h-48 object-cover object-center">
+                <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">-20%</div>
+                <div class="p-4 pt-10 relative">
+                    <p class="text-xs text-gray-500 absolute top-2 left-4">McDonald's East London</p>
+                    <h3 class="text-xl font-bold">First Order Discount</h3>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Oferta 2: Vegan Discount -->
+            <div class="relative bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                <!-- Usamos placeholder con ruta assets/ -->
+                <img src="assets/offer-vegan.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Pareja+Comiendo';" alt="Pareja comiendo felizmente" class="w-full h-48 object-cover object-center">
+                <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">-20%</div>
+                <div class="p-4 pt-10 relative">
+                    <p class="text-xs text-gray-500 absolute top-2 left-4">McDonald's East London</p>
+                    <h3 class="text-xl font-bold">Vegan Discount</h3>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Oferta 3: Free Ice Cream -->
+            <div class="relative bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                <!-- Usamos placeholder con ruta assets/ -->
+                <img src="assets/offer-ice-cream.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Helado+Gratis';" alt="Cono de helado de vainilla" class="w-full h-48 object-cover object-center">
+                <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">-100%</div>
+                <div class="p-4 pt-10 relative">
+                    <p class="text-xs text-gray-500 absolute top-2 left-4">McDonald's East London</p>
+                    <h3 class="text-xl font-bold">Free Ice Cream Offer</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. SECCIÓN DE PRODUCTOS (Burgers) -->
+        <h2 class="text-3xl font-extrabold mb-6">Burgers</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Tarjeta de Producto (Burger 1: Royal Cheese Burger) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">Royal Cheese Burger with extra Fries</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-1.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+1';" alt="Combo Royal Cheese" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Producto (Burger 2: The classics for 3) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">The classics for 3</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-2.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+2';" alt="Combo Clásicos para 3" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Producto (Burger 3: The classics for 3) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">The classics for 3</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-3.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+3';" alt="Combo Clásicos para 3" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Producto (Burger 4: The classics for 3) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">The classics for 3</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-4.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+4';" alt="Combo Clásicos para 3" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Producto (Burger 5: The classics for 3) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">The classics for 3</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-5.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+5';" alt="Combo Clásicos para 3" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Producto (Burger 6: The classics for 3) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center transition duration-300 hover:shadow-xl">
+                <div class="flex-grow space-y-1 pr-4">
+                    <h3 class="text-lg font-bold">The classics for 3</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-lg font-bold">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="relative flex-shrink-0">
+                    <!-- Usamos placeholder con ruta assets/ -->
+                    <img src="assets/burger-combo-6.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+6';" alt="Combo Clásicos para 3" class="rounded-lg">
+                    <button class="product-card-plus-icon absolute -bottom-3 -right-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>

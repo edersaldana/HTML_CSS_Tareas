@@ -1,0 +1,40 @@
+/*
+ * Archivo de estilos personalizados para el clon de la web de pedidos.
+ * Asume que Tailwind CSS está cargado y se usa para la mayoría de las utilidades.
+ */
+
+/* Definiciones de variables de color, extraídas de la sección <style> en index.html */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark-blue);
+}
+
+/* Clases de Tailwind para manejar los colores definidos en :root del HTML */
+.bg-primary-orange { background-color: var(--color-primary-orange); }
+.text-primary-orange { color: var(--color-primary-orange); }
+.hover-bg-primary-orange:hover { background-color: var(--color-primary-orange); }
+
+/* Estilos específicos para la tarjeta de producto con el icono "+" */
+.product-card-plus-icon {
+    /* @apply simula las clases de Tailwind que deben ser aplicadas */
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    cursor: pointer;
+    transition: all 200ms ease-in-out; /* duration-200 */
+    background-color: var(--color-primary-orange);
+    color: white;
+    /* Simulación de shadow de Tailwind con color naranja */
+    box-shadow: 0 4px 6px -1px rgba(255, 137, 1, 0.5), 0 2px 4px -2px rgba(255, 137, 1, 0.5);
+}
+
+/* Estilo para el fondo del banner principal (simulado) */
+.bg-dark-blue {
+    background-color: var(--color-dark-blue);
+}
+.text-dark-blue {
+    color: var(--color-dark-blue);
+}
