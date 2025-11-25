@@ -1,92 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Order - McDonald's East London</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-background">
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">Order<span>it</span></div>
+    <header class="main-header">
+        <div class="header-container section-container">
+            <div class="logo-brand">
+                <span class="text-gray-900">Order</span>
+                <span class="text-primary-orange">
+                    <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 8v8m0 0V8m0 8h4m-4 0h-4"></path></svg>
+                </span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" class="text-gray-600 hover-text-dark transition">Home</a>
+                <a href="#" class="text-gray-600 hover-text-dark transition">Special Offers</a>
+                <a href="#" class="bg-primary-orange text-white nav-button-restaurants transition">Restaurants</a>
+                <a href="#" class="text-gray-600 hover-text-dark transition">Track Order</a>
+            </nav>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Special Offers</a>
-            <a class="active" href="#">Restaurants</a>
-            <a href="#">Track Order</a>
-        </nav>
-
-        <button class="btn-login">Login/Signup</button>
+            <button class="bg-dark-blue text-white nav-button-login hover-opacity-90 transition">
+                Login/Signup
+            </button>
+        </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h4>I’m lovin’ it!</h4>
-            <h1>McDonald’s East London</h1>
+    <main class="main-content">
 
-            <div class="badges">
-                <div class="badge">Minimum Order: 12 GBP</div>
-                <div class="badge">Delivery in 20–25 Minutes</div>
-            </div>
+        <div class="restaurant-banner">
+            <div class="bg-dark-blue banner-content">
+                <div class="banner-background-overlay"></div>
 
-            <div class="open-badge">Open until 3:00 AM</div>
-        </div>
+                <div class="banner-flex-layout">
+                    <div class="banner-info">
+                        <p class="text-sm font-medium text-primary-orange">I'm lovin' it!</p>
+                        <h1 class="banner-title">McDonald's East London</h1>
+                        
+                        <div class="service-details">
+                            <div class="service-item">
+                                <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                <span>Minimum Order: **12 GBP**</span>
+                            </div>
+                            <div class="service-item">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Delivery in **20-25 Minutes**</span>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-primary-orange text-white banner-open-button transition">
+                            Open until 3:00 AM
+                        </button>
+                    </div>
 
-        <div class="hero-image">
-            <img src="assets/burger-hero.jpg" alt="Burger">
-            <div class="rating-box">
-                <h2>3.4</h2>
-                <p>1,360 reviews</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEARCH + TABS -->
-    <section class="filters">
-        <h2>All Offers from McDonald’s East London</h2>
-
-        <input class="search" type="text" placeholder="Search from menu...">
-
-        <div class="tabs">
-            <button class="tab active">Offers</button>
-            <button class="tab">Burgers</button>
-            <button class="tab">Fries</button>
-            <button class="tab">Snacks</button>
-            <button class="tab">Salads</button>
-            <button class="tab">Cold drinks</button>
-            <button class="tab">Happy Meal</button>
-            <button class="tab">Desserts</button>
-            <button class="tab">Hot drinks</button>
-            <button class="tab">Sauces</button>
-            <button class="tab">Orbit*</button>
-        </div>
-    </section>
-
-    <!-- BURGERS -->
-    <section class="burgers">
-        <h2>Burgers</h2>
-
-        <div class="burger-grid">
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="assets/burger1.jpg" class="card-img">
-                <div class="card-info">
-                    <h3>Royal Cheese Burger with extra Fries</h3>
-                    <p>1 McChicken®, 1 Big Mac®, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
-                    <b>GBP 23.10</b>
+                    <div class="bg-white banner-featured-card">
+                        <div class="featured-card-header">
+                            <div class="featured-card-score">
+                                <span class="text-4xl font-extrabold text-primary-orange">3.4</span>
+                            </div>
+                            <img src="assets/big-mac-combo.png" onerror="this.onerror=null;this.src='https://placehold.co/180x150/FF8901/white?text=Big+Mac+Combo';" alt="Hamburguesa y papas fritas" class="featured-card-image">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <div class="flex text-yellow-500 text-lg">
+                                <span class="font-bold">★★★</span><span class="text-gray-300">★★</span>
+                            </div>
+                            <span class="text-sm text-gray-500">1,360 reviews</span>
+                        </div>
+                    </div>
                 </div>
-                <button class="add-btn">+</button>
+            </div>
+        </div>
+
+        <div class="offers-search-section">
+            <h2 class="section-title">All Offers from McDonald's East London</h2>
+            <div class="search-bar-wrapper">
+                <input type="text" placeholder="Search from menu..." class="search-input" aria-label="Buscar en el menú">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
+
+        <div class="category-bar">
+            <nav class="category-nav">
+                <a href="#" class="category-link active">Offers</a>
+                <a href="#" class="category-link">Burgers</a>
+                <a href="#" class="category-link">Fries</a>
+                <a href="#" class="category-link">Snacks</a>
+                <a href="#" class="category-link">Salads</a>
+                <a href="#" class="category-link">Cold drinks</a>
+                <a href="#" class="category-link">Happy Meal®</a>
+                <a href="#" class="category-link">Desserts</a>
+                <a href="#" class="category-link">Hot drinks</a>
+                <a href="#" class="category-link">Sauces</a>
+                <a href="#" class="category-link">Orbit®</a>
+            </nav>
+        </div>
+
+        <h2 class="section-title mb-5">Current Offers</h2>
+        <div class="offers-grid">
+
+            <div class="offer-card">
+                <img src="assets/offer-first-order.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Mujer+Riendo';" alt="Mujer sonriendo usando un teléfono" class="offer-image">
+                <div class="offer-badge">-20%</div>
+                <div class="offer-details">
+                    <p class="offer-restaurant-name">McDonald's East London</p>
+                    <h3 class="offer-name">First Order Discount</h3>
+                </div>
             </div>
 
-            <!-- Más tarjetas copiar/pegar... -->
+            <div class="offer-card">
+                <img src="assets/offer-vegan.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Pareja+Comiendo';" alt="Pareja comiendo felizmente" class="offer-image">
+                <div class="offer-badge">-20%</div>
+                <div class="offer-details">
+                    <p class="offer-restaurant-name">McDonald's East London</p>
+                    <h3 class="offer-name">Vegan Discount</h3>
+                </div>
+            </div>
+            
+            <div class="offer-card">
+                <img src="assets/offer-ice-cream.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/ffffff?text=Helado+Gratis';" alt="Cono de helado de vainilla" class="offer-image">
+                <div class="offer-badge">-100%</div>
+                <div class="offer-details">
+                    <p class="offer-restaurant-name">McDonald's East London</p>
+                    <h3 class="offer-name">Free Ice Cream Offer</h3>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title text-3xl font-extrabold mb-6">Burgers</h2>
+        <div class="product-grid">
+
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">Royal Cheese Burger with extra Fries</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-1.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+1';" alt="Combo Royal Cheese" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">The classics for 3</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-2.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+2';" alt="Combo Clásicos para 3" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">The classics for 3</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-3.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+3';" alt="Combo Clásicos para 3" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">The classics for 3</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-4.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+4';" alt="Combo Clásicos para 3" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">The classics for 3</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-5.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+5';" alt="Combo Clásicos para 3" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white product-card">
+                <div class="product-info">
+                    <h3 class="product-title">The classics for 3</h3>
+                    <p class="product-description">1 McChicken™️, 1 Big Mac™️, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks</p>
+                    <div class="product-price-row">
+                        <span class="product-price">GBP 23.10</span>
+                    </div>
+                </div>
+                <div class="product-image-wrapper">
+                    <img src="assets/burger-combo-6.png" onerror="this.onerror=null;this.src='https://placehold.co/120x100/FFF8ED/FF8901?text=Combo+6';" alt="Combo Clásicos para 3" class="product-image">
+                    <button class="product-card-plus-icon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </div>
+            </div>
 
         </div>
-    </section>
 
+    </main>
 </body>
 </html>
